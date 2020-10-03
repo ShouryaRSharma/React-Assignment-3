@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Route, NavLink } from 'react-router-dom';
+import { Route, NavLink, Switch } from 'react-router-dom';
 
 import './App.css';
 import Courses from './containers/Courses/Courses';
+import Course from './containers/Course/Course';
 import Users from './containers/Users/Users';
 
 class App extends Component {
@@ -20,7 +21,7 @@ class App extends Component {
           <li>Redirect requests to /all-courses to /courses (=> Your "Courses" page)</li>
         </ol>
         <nav>
-          <ul style={{listStyle: 'none', margin: 'auto', padding: '0'}}>
+          <ul className="navlinks" style={{listStyle: 'none', margin: 'auto', padding: '0'}}>
             <li style={{margin: '16px', display: 'inline-block'}}>
               <NavLink to="/courses">Courses</NavLink>
             </li>
@@ -29,8 +30,11 @@ class App extends Component {
             </li>
           </ul>
         </nav>
-        <Route path="/courses" component={Courses} />
-        <Route path="/users" component={Users} />
+        <Switch>
+          <Route path="/users" component={Users} />
+          <Route path="/courses/:id" component={Course} />
+          <Route path="/courses" component={Courses} />
+        </Switch>
       </div>
     );
   }

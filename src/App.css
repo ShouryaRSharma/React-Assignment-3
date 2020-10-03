@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-a {
+.navlink a {
   text-decoration: none;
   padding: 5px;
   border: 1px solid #eee;
