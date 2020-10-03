@@ -17,9 +17,9 @@ class Courses extends Component {
 
     render () {
         return (
-            <div>
-                <h1>Amazing Udemy Courses</h1>
-                <section className="Courses">
+            <div >
+                <h1 className="tracking-in-contract-bck-bottom">Amazing Udemy Courses</h1>
+                <section className="Courses text-focus-in">
                     {
                         this.state.courses.map( course => {
                             return (

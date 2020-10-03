@@ -27,7 +27,7 @@ class Course extends Component {
 
     render () {
         return (
-            <div>
+            <div className="text-focus-in">
                 <h1>{this.state.courseTitle}</h1>
                 <p>You selected the Course with ID: {this.props.match.params.id}</p>
             </div>
